@@ -36,6 +36,8 @@ M-g") 'goto-line)
           "--completion-style=detailed"))
   )
 
+(setq make-backup-files nil)
+
 (defun regenerate-compile-commands ()
   (when (string-equal (buffer-name) "Makefile")
     (shell-command "bear -- make")))
